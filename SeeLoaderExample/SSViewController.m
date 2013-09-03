@@ -7,23 +7,22 @@
 //
 
 #import "SSViewController.h"
+#import "SSProgessAvatar.h"
 
 @interface SSViewController ()
+@property (weak, nonatomic) IBOutlet SSProgessAvatar *progressAvatar;
 
 @end
 
 @implementation SSViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    
+    self.progressAvatar.avatarImage = [UIImage imageNamed:@"avatar"];
+    self.progressAvatar.indefinite = YES;
 }
 
 @end
